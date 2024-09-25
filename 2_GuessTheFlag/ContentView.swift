@@ -48,6 +48,9 @@ struct ContentView: View {
 
     // Переменная @State для отслеживания завершения игры.
     @State private var gameOver = true
+    
+    @State private var animationAmounts = [0.0, 0.0, 0.0] // Массив для хранения углов вращения
+    @State private var selectedFlagIndex: Int? = nil
 
     // Основное тело View, которое описывает интерфейс игры.
     var body: some View {
@@ -87,12 +90,19 @@ struct ContentView: View {
                     // Кнопки для выбора флага. Генерируются циклом ForEach.
                     ForEach(0..<3) { number in
                         Button {
-                            flagTapped(number) // Вызов функции обработки выбора флага.
+                            withAnimation(.spring(duration: 1, bounce: 0.5)) {
+                                animationAmounts[number] += 360 // Увеличиваем угол только для нажатого изображения
+                                selectedFlagIndex = number // Обновляем индекс выбранного флага
+                                flagTapped(number) // Ваш обработчик выбора флага
+                            }
                         } label: {
                             Image(countries[number])
                                 .clipShape(.capsule) // Придание изображению формы капсулы.
                                 .shadow(radius: 5)   // Тень для визуального эффекта.
+                                .rotation3DEffect(.degrees(animationAmounts[number]), axis: (x: 0, y: 1, z: 0)) // Применяем анимацию к конкретному изображению
+                                .opacity(selectedFlagIndex == number ? 1 : 0.75) // Условие для прозрачности
                         }
+                        
                     }
                 }
                 .FlagImage()
@@ -131,6 +141,7 @@ struct ContentView: View {
 
     // Функция, которая вызывается при выборе флага.
     func flagTapped(_ number: Int) {
+
         // Проверка, был ли выбран правильный флаг.
         if number == correctAnswer {
             scoreTitle = "Correct"
