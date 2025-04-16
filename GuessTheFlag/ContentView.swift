@@ -1,9 +1,6 @@
 //
 //  ContentView.swift
 //  GuessTheFlag
-//
-//  Created by Serge Eliseev on 22.02.2025.
-//
 
 import SwiftUI
 
@@ -82,7 +79,6 @@ struct ContentView: View {
                              axis: (x: 0, y: 1, z: 0)
                          )
                     }
-                    
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 20)
@@ -105,8 +101,6 @@ struct ContentView: View {
                     
                     Text("Ошибочный ответ: \(errorAnswer)")
                         .padding(.bottom, 5)
-                    
-                    
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 20)
@@ -142,11 +136,9 @@ struct ContentView: View {
             messageTitle = "❌ Неверно! Это флаг \(countries[answer])"
             errorAnswer += 1
             countAnswer += 1
-            
         }
         showingScore = true
-       
-       
+
     }
     
     func askQuestion() {
@@ -175,17 +167,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
-
-
-//        @State private var animationAmount: CGFloat = 1.0
-//        
-//        var body: some View {
-//            Button("Нажми меня") {
-//                animationAmount += 0.5 // Увеличиваем масштаб при каждом нажатии
-//            }
-
-//            .scaleEffect(animationAmount) // Применяем масштабирование
-//            .animation(.easeInOut, value: animationAmount) // Добавляем анимацию
-//        }
-   
