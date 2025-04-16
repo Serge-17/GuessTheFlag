@@ -2,9 +2,7 @@
 
 GuessTheFlag — это увлекательная игра, в которой пользователи могут проверить свои знания о флагах стран. Игра предлагает игрокам угадать, к какой стране принадлежит представленный флаг, что делает её отличным способом для изучения географии и флагов.
 
-<img src="GuessTheFlag/Assets.xcassets/GuessTheFlag_1.png" alt="Simulator Screenshot - iPhone 16 Pro" width="300" />               <img src="GuessTheFlag/Assets.xcassets/GuessTheFlag_2.png" alt="Simulator Screenshot - iPhone 16 Pro" width="300" />  
-
-<img src="GuessTheFlag/Assets.xcassets/GuessTheFlag_3.png" alt="Simulator Screenshot - iPhone 16 Pro" width="300" />               <img src="GuessTheFlag/Assets.xcassets/GuessTheFlag_4.png" alt="Simulator Screenshot - iPhone 16 Pro" width="300" />
+<img src="GuessTheFlag/Assets.xcassets/GuessTheFlag_1.png" alt="Simulator Screenshot - iPhone 16 Pro" width="300" /> <img src="GuessTheFlag/Assets.xcassets/GuessTheFlag_2.png" alt="Simulator Screenshot - iPhone 16 Pro" width="300" /> <img src="GuessTheFlag/Assets.xcassets/GuessTheFlag_3.png" alt="Simulator Screenshot - iPhone 16 Pro" width="300" /> <img src="GuessTheFlag/Assets.xcassets/GuessTheFlag_4.png" alt="Simulator Screenshot - iPhone 16 Pro" width="300" />
 
 ## Возможности
 
