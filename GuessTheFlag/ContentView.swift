@@ -130,6 +130,7 @@ struct ContentView: View {
     func flagTapped(_ number: Int) {
         if number == answer {
             scoreTitle = "Правильно"
+            messageTitle = "✅ Верно! Это флаг \(countries[number])"
             correctAnswer += 1
             countAnswer += 1
             withAnimation(.spring(duration: 1, bounce: 0.5)) {
@@ -138,13 +139,13 @@ struct ContentView: View {
            
         } else {
             scoreTitle = "Ошибка"
-            messageTitle = "Неверно! Это флаг \(countries[answer])"
+            messageTitle = "❌ Неверно! Это флаг \(countries[answer])"
             errorAnswer += 1
             countAnswer += 1
             
         }
         showingScore = true
-        selectedFlag = 0
+       
        
     }
     
